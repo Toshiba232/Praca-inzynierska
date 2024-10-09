@@ -4,24 +4,51 @@
   <div class="row mb-5 pt-1">
     <div class="">
         <h3 class="text-uppercase text-primary">Jakaś nazwa działki </h3>
-        <div class="example-boundary" #boundary>
-          <div class="inner-boundary"></div>
-          <app-roslina-box
+
+        <input id="zoomControl" min="1" max="10" value="10" step="1" (input)="showVal($event)" type="range" />
+
+
+        <!-- Canvas -->
+        <div class="canvas" #canvas>
+          <app-roslina-canvas-box
           [dragPosition]="{x: 0, y: 0}"
-          ></app-roslina-box>
-          <app-roslina-box
+          ></app-roslina-canvas-box>
+          <app-roslina-canvas-box
           [dragPosition]="{x: 100, y: 200}"
-          ></app-roslina-box>
-          <app-roslina-box
+          ></app-roslina-canvas-box>
+          <app-roslina-canvas-box
           [dragPosition]="{x: 800, y: 30}"
-          ></app-roslina-box>
-          <app-roslina-box
+          ></app-roslina-canvas-box>
+          <app-roslina-canvas-box
           [dragPosition]="{x: 1200, y: 90}"
-          ></app-roslina-box>
+          ></app-roslina-canvas-box>
 
           <app-roslina-box
           [dragPosition]="{x: 80, y: 800}"
           ></app-roslina-box>
+        </div>
+
+        <div  class="example-boundary" #boundary>
+          <div class="inner-boundary" #innerBoundary>
+            <app-roslina-box
+            [dragPosition]="{x: 0, y: 0}"
+            ></app-roslina-box>
+            <app-roslina-box
+            [dragPosition]="{x: 100, y: 200}"
+            ></app-roslina-box>
+            <app-roslina-box
+            [dragPosition]="{x: 800, y: 30}"
+            ></app-roslina-box>
+            <app-roslina-box
+            [dragPosition]="{x: 1200, y: 90}"
+            ></app-roslina-box>
+
+            <app-roslina-box
+            [dragPosition]="{x: 80, y: 800}"
+            ></app-roslina-box>
+
+          </div>
+
         </div>
     </div>
   </div>

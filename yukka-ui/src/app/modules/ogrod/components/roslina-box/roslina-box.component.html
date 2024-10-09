@@ -3,12 +3,16 @@
 
 
 <div class="example-box"
+cdkDrag
 cdkDragBoundary=".example-boundary"
 [cdkDragFreeDragPosition]="dragPosition"
-cdkDrag
+[cdkDragScale]="zoomScale"
+
+(cdkDragStarted)="onDragStarted($event)"
 (cdkDragEnded)="onDragEnded($event)"
 (cdkDragMoved)="onDrag($event)"
 >
+<div class="fuu"  >
   <img cdkDragHandle class="rounded-circle border border-3 border-success-subtle"
   width="150" height="150" alt="obraz.png">
 
@@ -20,6 +24,8 @@ cdkDrag
     <div class="overflow-text" cdkDrag>
       Jakaś nazwa fajna dsadsas czy coś aasdasdsad aaa   aaa
     </div>
+</div>
+
 
 
 </div>
